@@ -7,6 +7,18 @@
     <title>Ejercicio 2</title>
 </head>
 <body>
+    <script>
+        function imprimirResultado(){
+            alert("El texto introducido tiene " + document.formulario.contar.value.length + " caracteres.");
+        }
+    </script>
+    <h1>Ejercicio 2: Contador de caracteres</h1>
+
+    <form name="formulario">
+        Introducir un texto: 
+        <input type="text" name="contar">
+        <input type="button" id="enviar" onclick="imprimirResultado()" value="Enviar">
+    </form>
     
 </body>
 </html>
