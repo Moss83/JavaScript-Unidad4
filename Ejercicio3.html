@@ -1,12 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 3</title>
 </head>
+
 <body>
-    
+    <script>
+        const alumnos = [
+
+            {
+                nombre: 'Juan Gomez',
+                nota: 7
+            },
+
+            {
+                nombre: 'Pedro Rodriguez',
+                nota: 4
+            },
+            
+            {
+                nombre: 'Roxana García',
+                nota: 8
+            },
+            
+            {
+                nombre: 'Luciano Lopez',
+                nota: 5
+            },
+            
+            {
+                nombre: 'Fernanda Gimenez',
+                nota: 6
+            },
+            
+            {
+                nombre: 'Florencia Martinez',
+                nota: 10
+            },
+            
+            {
+                nombre: 'Raul Sanchez',
+                nota: 7
+            },
+            
+            {
+                nombre: 'Sandra Figueroa',
+                nota: 8
+            }
+        ];
+        
+        function alumnosAprobados(){
+            var aprobados = alumnos.filter(alum => alum.nota >= 7);
+            var lista = document.getElementById("lista");
+
+            if (lista.innerText === "") {
+                for (var i = 0; i < aprobados.length; i++){
+                    var item = document.createElement("li");
+                    item.innerText = aprobados[i].nombre;
+                    lista.appendChild(item);
+                }
+            }
+        }
+        
+    </script>
+
+    <h1>Ejercicio 3: Alumnos Aprobados</h1>
+
+    <button onclick="alumnosAprobados()">Ver Resultados</button>
+
+    <ul id="lista">
+
+    </ul>
 </body>
+
 </html>
