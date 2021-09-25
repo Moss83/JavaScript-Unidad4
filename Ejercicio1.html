@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Ejercicio1.css">
     <title>Ejercicio 1</title>
 </head>
 <body>
-    
+    <h1>Ejercicio 1: Cambio de Fondo</h1>
+
+    <div class="cuadrado" id="blanco">
+        Blanco
+    </div>
+
+    <div class="cuadrado" id="rojo">
+        Rojo
+    </div>
+
+    <div class="cuadrado" id="amarillo">
+        Amarillo
+    </div>
+
+    <script>
+        var blanco = document.getElementById("blanco");
+        var rojo = document.getElementById("rojo");
+        var amarillo = document.getElementById("amarillo");
+        
+        blanco.addEventListener("click", function(){
+            document.body.style.backgroundColor = "white";
+        });
+
+        rojo.addEventListener("click", function(){
+            document.body.style.backgroundColor = "red";
+        });
+
+        amarillo.addEventListener("click", function(){
+            document.body.style.backgroundColor = "yellow";
+        });
+    </script>
 </body>
 </html>
